@@ -1,0 +1,18 @@
+version: 2
+
+models:
+    - name: department_raw
+      description: "dbt model to create the department raw table"
+    - name: fact_raw
+      description: "dbt model to create the fact raw table"
+    - name: stores_raw
+      description: "dbt model to create the stores raw table"
+
+sources:
+    - name: raw_copies
+      database: WALMART_PROJECT
+      schema: RAW
+      tables:
+        - name: department_cp
+        - name: fact_cp
+        - name: stores_cp
