@@ -14,9 +14,9 @@ WITH CTE1 AS
 SELECT 
 CAST(Store AS INT) AS Store_id,
 CAST(Dept AS INT) AS Dept_id,
-CAST(Date AS DATE) AS Date_id,
+CAST(Date AS DATE) AS Store_Date,
 CAST(Weekly_Sales AS DECIMAL(18,2)) AS Store_Weekly_sales,
-CAST(IsHoliday AS BOOLEAN) AS Isholiday,
+CAST(IsHoliday AS INT) AS Isholiday,
 CAST(Store || '--' || Dept || '--' || Date AS STRING) AS primarykey,
 CAST(INSERT_DTS AS DATETIME) AS Insert_date,
 CURRENT_TIMESTAMP(6) AS Update_date
